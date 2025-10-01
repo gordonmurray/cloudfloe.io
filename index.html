@@ -23,8 +23,7 @@
                 <div class="nav-links">
                     <a href="#features" class="nav-link">Features</a>
                     <a href="#quickstart" class="nav-link">Quick Start</a>
-                    <a href="#demo" class="nav-link">Demo</a>
-                    <a href="https://github.com/cloudfloe/cloudfloe" class="btn btn-primary" target="_blank">
+                    <a href="https://github.com/gordonmurray/cloudfloe" class="btn btn-primary" target="_blank">
                         <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
@@ -40,11 +39,11 @@
                     The fastest way to query your <span class="highlight">Iceberg data lake</span>
                 </h1>
                 <p class="hero-subtitle">
-                    DuckDB-as-a-Service for Apache Iceberg. Connect to S3, R2, or MinIO — run SQL instantly — no clusters, no ops, no setup.
+                    DuckDB-as-a-Service for Apache Iceberg. Connect to S3, R2, MinIO, or WarpStream Tableflow — run SQL instantly — no clusters, no ops, no setup.
                 </p>
                 <div class="hero-actions">
                     <a href="#quickstart" class="btn btn-primary btn-large">Get Started</a>
-                    <a href="#demo" class="btn btn-secondary btn-large">See Demo</a>
+                    <a href="#examples" class="btn btn-secondary btn-large">See Examples</a>
                 </div>
 
                 <div class="hero-demo">
@@ -57,7 +56,7 @@
                         </div>
                         <div class="terminal-body">
                             <div class="terminal-line">
-                                <span class="prompt">$</span> git clone https://github.com/cloudfloe/cloudfloe
+                                <span class="prompt">$</span> git clone https://github.com/gordonmurray/cloudfloe
                             </div>
                             <div class="terminal-line">
                                 <span class="prompt">$</span> cd cloudfloe && docker compose up -d
@@ -117,7 +116,7 @@
                 <div class="feature">
                     <div class="feature-icon">🌍</div>
                     <h3>Vendor Neutral</h3>
-                    <p>Works with AWS S3, Cloudflare R2, MinIO, or any S3-compatible storage. Your data stays yours.</p>
+                    <p>Works with AWS S3, Cloudflare R2, MinIO, WarpStream Tableflow, or any S3-compatible storage. Your data stays yours.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🐳</div>
@@ -186,7 +185,7 @@
                     <div class="step-content">
                         <h3>Clone & Start</h3>
                         <div class="code-block">
-                            <code>git clone https://github.com/cloudfloe/cloudfloe<br>
+                            <code>git clone https://github.com/gordonmurray/cloudfloe<br>
 cd cloudfloe<br>
 docker compose up -d</code>
                         </div>
@@ -196,7 +195,7 @@ docker compose up -d</code>
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Connect Your Data</h3>
-                        <p>Point Cloudfloe at your S3 bucket with Iceberg tables. Works with AWS, Cloudflare R2, MinIO, or any S3-compatible storage.</p>
+                        <p>Point Cloudfloe at your S3 bucket with Iceberg tables. Works with AWS, Cloudflare R2, MinIO, WarpStream Tableflow, or any S3-compatible storage.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -209,7 +208,7 @@ docker compose up -d</code>
             </div>
 
             <div class="quickstart-cta">
-                <a href="https://github.com/cloudfloe/cloudfloe" class="btn btn-primary btn-large" target="_blank">
+                <a href="https://github.com/gordonmurray/cloudfloe" class="btn btn-primary btn-large" target="_blank">
                     <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
@@ -219,29 +218,15 @@ docker compose up -d</code>
         </div>
     </section>
 
-    <!-- Demo -->
-    <section class="demo" id="demo">
+    <!-- Examples -->
+    <section class="demo" id="examples">
         <div class="container">
-            <h2>See it in action</h2>
+            <h2>Example queries you can run</h2>
             <p class="section-subtitle">Real IMDb movie data in Iceberg format, queried instantly with DuckDB</p>
 
             <div class="demo-container">
-                <div class="demo-video">
-                    <div class="video-placeholder">
-                        <div class="play-button">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"/>
-                            </svg>
-                        </div>
-                        <div class="video-overlay">
-                            <h3>Watch Demo</h3>
-                            <p>See how to query 37K movies in under 60 seconds</p>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="demo-features">
-                    <h3>What you'll see:</h3>
+                    <h3>What you can do:</h3>
                     <ul>
                         <li>✅ Docker Compose startup in seconds</li>
                         <li>✅ Connect to MinIO with sample data</li>
@@ -250,6 +235,24 @@ docker compose up -d</code>
                         <li>✅ Export results to CSV</li>
                         <li>✅ Track query costs and performance</li>
                     </ul>
+                </div>
+
+                <div class="demo-queries">
+                    <h3>Try these queries:</h3>
+                    <div class="query-example">
+                        <code>SELECT title, year, rating<br>
+FROM movies<br>
+WHERE year >= 2020<br>
+ORDER BY rating DESC<br>
+LIMIT 10;</code>
+                    </div>
+                    <div class="query-example">
+                        <code>SELECT genre, COUNT(*) as count,<br>
+       AVG(rating) as avg_rating<br>
+FROM movies<br>
+GROUP BY genre<br>
+ORDER BY count DESC;</code>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,7 +290,7 @@ docker compose up -d</code>
                 <h2>Ready to query your Iceberg lake?</h2>
                 <p>Join the data teams already using Cloudfloe to explore their data lakes faster than ever.</p>
                 <div class="cta-actions">
-                    <a href="https://github.com/cloudfloe/cloudfloe" class="btn btn-primary btn-large" target="_blank">
+                    <a href="https://github.com/gordonmurray/cloudfloe" class="btn btn-primary btn-large" target="_blank">
                         <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
@@ -313,26 +316,22 @@ docker compose up -d</code>
                 <div class="footer-links">
                     <div class="footer-section">
                         <h4>Project</h4>
-                        <a href="https://github.com/cloudfloe/cloudfloe" target="_blank">GitHub</a>
-                        <a href="https://github.com/cloudfloe/cloudfloe/releases" target="_blank">Releases</a>
-                        <a href="https://github.com/cloudfloe/cloudfloe/issues" target="_blank">Issues</a>
+                        <a href="https://github.com/gordonmurray/cloudfloe" target="_blank">GitHub</a>
+                        <a href="https://github.com/gordonmurray/cloudfloe/issues" target="_blank">Issues</a>
                     </div>
                     <div class="footer-section">
                         <h4>Docs</h4>
-                        <a href="https://github.com/cloudfloe/cloudfloe#quick-start" target="_blank">Quick Start</a>
-                        <a href="https://github.com/cloudfloe/cloudfloe#configuration" target="_blank">Configuration</a>
-                        <a href="https://github.com/cloudfloe/cloudfloe#api" target="_blank">API Reference</a>
+                        <a href="https://github.com/gordonmurray/cloudfloe#quick-start" target="_blank">Quick Start</a>
+                        <a href="https://github.com/gordonmurray/cloudfloe#configuration" target="_blank">Configuration</a>
                     </div>
                     <div class="footer-section">
                         <h4>Community</h4>
-                        <a href="https://github.com/cloudfloe/cloudfloe/discussions" target="_blank">Discussions</a>
-                        <a href="https://github.com/cloudfloe/cloudfloe/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
-                        <a href="https://twitter.com/cloudfloe_io" target="_blank">Twitter</a>
+                        <a href="https://github.com/gordonmurray/cloudfloe/discussions" target="_blank">Discussions</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Cloudfloe. Open source under MIT license.</p>
+                <p>&copy; 2025 Cloudfloe.</p>
             </div>
         </div>
     </footer>

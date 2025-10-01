@@ -563,6 +563,31 @@ p {
     gap: 0.5rem;
 }
 
+.demo-queries {
+    margin-top: 2rem;
+}
+
+.demo-queries h3 {
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.query-example {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+}
+
+.query-example code {
+    color: #22c55e;
+    line-height: 1.6;
+}
+
 /* Tech Section */
 .tech {
     padding: 6rem 0;
