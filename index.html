@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudfloe - The Fastest Way to Query Your Iceberg Data Lake</title>
+    <meta name="description" content="DuckDB-as-a-Service for Apache Iceberg. Query your data lake instantly - no clusters, no ops, no setup. Docker Compose ready.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">🌊</span>
+                    <span class="logo-text">Cloudfloe</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#quickstart" class="nav-link">Quick Start</a>
+                    <a href="#demo" class="nav-link">Demo</a>
+                    <a href="https://github.com/cloudfloe/cloudfloe" class="btn btn-primary" target="_blank">
+                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-container">
+                <h1 class="hero-title">
+                    The fastest way to query your <span class="highlight">Iceberg data lake</span>
+                </h1>
+                <p class="hero-subtitle">
+                    DuckDB-as-a-Service for Apache Iceberg. Connect to S3, R2, or MinIO — run SQL instantly — no clusters, no ops, no setup.
+                </p>
+                <div class="hero-actions">
+                    <a href="#quickstart" class="btn btn-primary btn-large">Get Started</a>
+                    <a href="#demo" class="btn btn-secondary btn-large">See Demo</a>
+                </div>
+
+                <div class="hero-demo">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="terminal-title">Terminal</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> git clone https://github.com/cloudfloe/cloudfloe
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> cd cloudfloe && docker compose up -d
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> open http://localhost:3000
+                            </div>
+                            <div class="terminal-line output">🌊 Cloudfloe running at http://localhost:3000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>Data lakes are great. Iceberg is powerful.<br>But querying them? <em>Not so much.</em></h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <div class="problem-icon">🏗️</div>
+                    <h3>Trino Setup Hell</h3>
+                    <p>Heavy, cluster-based, complex configuration. Hours of setup before your first query.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🔒</div>
+                    <h3>Vendor Lock-in</h3>
+                    <p>Athena ties you to AWS. BigQuery to Google. What about multi-cloud freedom?</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">💸</div>
+                    <h3>Hidden Costs</h3>
+                    <p>Surprise bills from scanning terabytes. No visibility into what you're actually paying for.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🐌</div>
+                    <h3>Slow Feedback</h3>
+                    <p>Wait for clusters to spin up. Wait for queries to run. Wait for results. Rinse, repeat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="features">
+        <div class="container">
+            <h2>Cloudfloe is different</h2>
+            <p class="section-subtitle">DuckDB's blazing performance meets Iceberg's flexibility. Zero infrastructure, maximum speed.</p>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Queries</h3>
+                    <p>No cluster spin-up time. No waiting. DuckDB processes your Iceberg data at memory speed.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Vendor Neutral</h3>
+                    <p>Works with AWS S3, Cloudflare R2, MinIO, or any S3-compatible storage. Your data stays yours.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🐳</div>
+                    <h3>Docker Ready</h3>
+                    <p>One command deployment. Runs anywhere Docker runs. No complex infrastructure required.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Cost Transparent</h3>
+                    <p>See exactly how much data you're scanning and what it costs. No surprise bills.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔓</div>
+                    <h3>Open Source</h3>
+                    <p>MIT licensed. Self-hosted. Modify it, extend it, contribute to it. Community driven.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Modern UI</h3>
+                    <p>Beautiful SQL editor with syntax highlighting. Query history. Export capabilities. Built for data professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is This For -->
+    <section class="audience">
+        <div class="container">
+            <h2>Perfect for data teams who want to move fast</h2>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">👨‍💻</div>
+                    <h3>Data Engineers</h3>
+                    <p>Need to peek inside Iceberg tables fast without setting up Trino clusters or wrestling with Athena permissions.</p>
+                    <div class="audience-quote">
+                        "I just want to see my Iceberg data <em>now</em>"
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">📊</div>
+                    <h3>BI Developers</h3>
+                    <p>Building dashboards with Superset, Rill, or Evidence and need a reliable query scratchpad for prototyping.</p>
+                    <div class="audience-quote">
+                        "Let me test this query before I wire it into production"
+                    </div>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">💼</div>
+                    <h3>FinOps Teams</h3>
+                    <p>Want visibility into data scan costs and query patterns before committing to expensive cloud analytics services.</p>
+                    <div class="audience-quote">
+                        "How much will this dashboard actually cost us?"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="quickstart" id="quickstart">
+        <div class="container">
+            <h2>Get started in 30 seconds</h2>
+            <div class="quickstart-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Clone & Start</h3>
+                        <div class="code-block">
+                            <code>git clone https://github.com/cloudfloe/cloudfloe<br>
+cd cloudfloe<br>
+docker compose up -d</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Connect Your Data</h3>
+                        <p>Point Cloudfloe at your S3 bucket with Iceberg tables. Works with AWS, Cloudflare R2, MinIO, or any S3-compatible storage.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Start Querying</h3>
+                        <p>Write SQL, hit Ctrl+Enter, see results instantly. Export to CSV, save queries, track costs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quickstart-cta">
+                <a href="https://github.com/cloudfloe/cloudfloe" class="btn btn-primary btn-large" target="_blank">
+                    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Get Started on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2>See it in action</h2>
+            <p class="section-subtitle">Real IMDb movie data in Iceberg format, queried instantly with DuckDB</p>
+
+            <div class="demo-container">
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <div class="play-button">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"/>
+                            </svg>
+                        </div>
+                        <div class="video-overlay">
+                            <h3>Watch Demo</h3>
+                            <p>See how to query 37K movies in under 60 seconds</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-features">
+                    <h3>What you'll see:</h3>
+                    <ul>
+                        <li>✅ Docker Compose startup in seconds</li>
+                        <li>✅ Connect to MinIO with sample data</li>
+                        <li>✅ Query 37,537 IMDb movies instantly</li>
+                        <li>✅ Filter by decade, genre, runtime</li>
+                        <li>✅ Export results to CSV</li>
+                        <li>✅ Track query costs and performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech">
+        <div class="container">
+            <h2>Built on proven technology</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>🦆 DuckDB</h3>
+                    <p>Lightning-fast OLAP engine. Processes gigabytes in seconds. Perfect for analytical workloads.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>🧊 Apache Iceberg</h3>
+                    <p>Modern table format. ACID transactions, schema evolution, partition pruning. Industry standard.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>⚡ FastAPI</h3>
+                    <p>High-performance Python web framework. Automatic OpenAPI docs. Type-safe and fast.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>🐳 Docker</h3>
+                    <p>Containerized deployment. Runs anywhere. No dependency hell. One command setup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to query your Iceberg lake?</h2>
+                <p>Join the data teams already using Cloudfloe to explore their data lakes faster than ever.</p>
+                <div class="cta-actions">
+                    <a href="https://github.com/cloudfloe/cloudfloe" class="btn btn-primary btn-large" target="_blank">
+                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Star on GitHub
+                    </a>
+                    <a href="#quickstart" class="btn btn-secondary btn-large">Read the Docs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🌊</span>
+                        <span class="logo-text">Cloudfloe</span>
+                    </div>
+                    <p>The fastest way to query your Iceberg data lake</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Project</h4>
+                        <a href="https://github.com/cloudfloe/cloudfloe" target="_blank">GitHub</a>
+                        <a href="https://github.com/cloudfloe/cloudfloe/releases" target="_blank">Releases</a>
+                        <a href="https://github.com/cloudfloe/cloudfloe/issues" target="_blank">Issues</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Docs</h4>
+                        <a href="https://github.com/cloudfloe/cloudfloe#quick-start" target="_blank">Quick Start</a>
+                        <a href="https://github.com/cloudfloe/cloudfloe#configuration" target="_blank">Configuration</a>
+                        <a href="https://github.com/cloudfloe/cloudfloe#api" target="_blank">API Reference</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Community</h4>
+                        <a href="https://github.com/cloudfloe/cloudfloe/discussions" target="_blank">Discussions</a>
+                        <a href="https://github.com/cloudfloe/cloudfloe/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
+                        <a href="https://twitter.com/cloudfloe_io" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cloudfloe. Open source under MIT license.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
